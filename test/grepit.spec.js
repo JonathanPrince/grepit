@@ -1,5 +1,6 @@
 'use strict';
 var expect = require('expect.js')
+  , catchE = require('catch-error')
   , grepit = require('../index');
 
 describe('grepit module', function(){
@@ -8,11 +9,17 @@ describe('grepit module', function(){
     it('should return an array', function(){
       // arrange
       var pattern = 'abc';
-      var file = './test_file.txt';
+      var file = 'test/test_file.txt';
       // act
       var result = grepit(pattern, file);
       // assert
       expect(result).to.be.an('array');
+    });
+    it('should return an error if file is not found', function(){
+      var pattern = 'abc';
+      var file = 'test/not_test_file.txt';
+      var result = catchE({func: grepit, args: [pattern, file]});
+      expect(result).to.be.an(Error);
     });
   });
 
