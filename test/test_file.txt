@@ -1,0 +1,4 @@
+The first sentence of the text.
+Now the second sentence.
+Why not a third, a third that has a comma in it.
+And then comes the fourth sentence.
