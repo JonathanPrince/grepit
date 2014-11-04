@@ -1,0 +1,27 @@
+{
+  "strict": true,
+  "laxcomma": true,
+  "eqeqeq": true,
+  "quotmark": "single",
+  "forin": true,
+  "latedef": true,
+  "undef": true,
+  "freeze": true,
+  "browser": true,
+  "devel": true,
+  "globals": {
+    "require": false,
+    "__dirname": false,
+    "describe": false,
+    "it": false,
+    "Given": false,
+    "When": false,
+    "Then": false,
+    "And": false,
+    "beforeEach": false
+  },
+  "node": true,
+  "indent": 2,
+  "esnext": true,
+  "newcap": false
+}
