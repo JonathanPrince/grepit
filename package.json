@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test:dev": "testem .",
+    "test": "npm run jshint && mocha -R spec test/**/*.spec.js",
+    "jshint": "jshint ."
   },
   "repository": {
     "type": "git",
