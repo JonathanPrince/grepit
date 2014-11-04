@@ -1,0 +1,25 @@
+{
+  "name": "grepit",
+  "version": "0.0.1",
+  "description": "Grep Module for Node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonathanPrince/grepit.git"
+  },
+  "keywords": [
+    "grep"
+  ],
+  "author": "Jonathan Prince <jonathan.prince@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonathanPrince/grepit/issues"
+  },
+  "homepage": "https://github.com/JonathanPrince/grepit"
+}
