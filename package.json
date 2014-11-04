@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/JonathanPrince/grepit/issues"
   },
-  "homepage": "https://github.com/JonathanPrince/grepit"
+  "homepage": "https://github.com/JonathanPrince/grepit",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "jshint": "^2.5.8",
+    "mocha": "^2.0.1",
+    "testem": "^0.6.22"
+  }
 }
