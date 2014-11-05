@@ -21,6 +21,12 @@ describe('grepit module', function(){
       var result = catchE({func: grepit, args: [pattern, file]});
       expect(result).to.be.an(Error);
     });
+    it('should return an error if pattern is not a string', function(){
+      var pattern = {};
+      var file = 'test/test_file.txt';
+      var result = catchE({func: grepit, args: [pattern, file]});
+      expect(result).to.be.an(Error);
+    });
   });
 
 });
