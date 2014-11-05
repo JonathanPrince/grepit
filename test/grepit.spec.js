@@ -36,4 +36,24 @@ describe('grepit module', function(){
     });
   });
 
+  describe('when passing a string pattern', function(){
+    it('should return an array of lines from the text that contain pattern', function(){
+      var pattern = 'first';
+      var file = 'test/test_file.txt';
+      var result = grepit(pattern, file);
+      var expected = ['The first sentence of the text.'];
+      expect(result).to.eql(expected);
+    });
+  });
+
+  describe('when passing a regex pattern', function(){
+    it('should return an array of lines from the text that contain pattern', function(){
+      var pattern = /first/;
+      var file = 'test/test_file.txt';
+      var result = grepit(pattern, file);
+      var expected = ['The first sentence of the text.'];
+      expect(result).to.eql(expected);
+    });
+  });
+
 });

@@ -11,6 +11,18 @@ module.exports = function(pattern, file) {
 
   var results = [];
 
+  var text = fs.readFileSync(file, 'utf8');
+
+  var lines = text.split('\n');
+
+  lines.forEach(function(line){
+
+    if (line.search(pattern) !== -1){
+      results.push(line);
+    }
+
+  });
+
   return results;
 
 };
