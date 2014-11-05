@@ -44,6 +44,13 @@ describe('grepit module', function(){
       var expected = ['The first sentence of the text.'];
       expect(result).to.eql(expected);
     });
+    it('should return an empty array if the pattern is not in the text.', function(){
+      var pattern = 'xyz';
+      var file = 'test/test_file.txt';
+      var result = grepit(pattern, file);
+      var expected = [];
+      expect(result).to.eql(expected);
+    });
   });
 
   describe('when passing a regex pattern', function(){
@@ -52,6 +59,24 @@ describe('grepit module', function(){
       var file = 'test/test_file.txt';
       var result = grepit(pattern, file);
       var expected = ['The first sentence of the text.'];
+      expect(result).to.eql(expected);
+    });
+    it('should return an empty array if the pattern is not in the text.', function(){
+      var pattern = /xyz/;
+      var file = 'test/test_file.txt';
+      var result = grepit(pattern, file);
+      var expected = [];
+      expect(result).to.eql(expected);
+    });
+    it('should return an array of lines from the text that contain pattern', function(){
+      var pattern = /sentence/;
+      var file = 'test/test_file.txt';
+      var result = grepit(pattern, file);
+      var expected = [
+        'The first sentence of the text.',
+        'Now the second sentence.',
+        'And then comes the fourth sentence.'
+      ];
       expect(result).to.eql(expected);
     });
   });
