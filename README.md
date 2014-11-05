@@ -1,4 +1,5 @@
 #grepit
+[![NPM](https://nodei.co/npm/grepit.png?downloads=true&stars=true)](https://nodei.co/npm/grepit/)
 
 ##Description
 
