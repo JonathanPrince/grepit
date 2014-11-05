@@ -3,9 +3,12 @@ var fs     = require('fs')
 
 module.exports = function(pattern, file) {
 
-  assert.equal(typeof pattern, 'string', 'First argument should be a string.');
+  assert.ok(typeof pattern === 'string' || pattern instanceof RegExp,
+            'First argument should be a string or regular expression.');
   assert.ok(fs.existsSync(file), 'File not Found');
 
-  return [];
+  var results = [];
+
+  return results;
 
 };
